@@ -1,0 +1,7 @@
+spotifyd &
+redshift &
+keepassxc &
+light-locker --lock-on-suspend &
+light-locker-command -i &
+sleep 10 && xscreensaver --nosplash &
+#picom --experimental-backend &
