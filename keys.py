@@ -16,7 +16,6 @@ keys = [
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "f", lazy.spawn('alacritty --hold -e ranger'), desc='Open Ranger Terminal'),
     Key([mod], "m", lazy.spawn('alacritty --hold -e cmus'), desc='Open Cmus Terminal'),
-    Key([], "Print", lazy.spawn('gnome-screenshot'), desc='Print Screen'),
     Key([mod, "shift"], "Return", lazy.spawn('rofi -show run'), desc="Spawn a rofi run window"),
     Key([mod], "w", lazy.spawn('firefox'), desc="Spawn a browser window"),
     #Volume Control
