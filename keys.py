@@ -8,7 +8,8 @@ terminal = "alacritty"
 
 keys = [
     #Special Keys
-    Key([], 'XF86Battery', lazy.spawn('light-locker-command -l'), desc="Lock screen"),	
+    Key([], 'XF86Battery', lazy.spawn('light-locker-command -l'), desc="Lock screen"),
+    Key([], '3270_PrintScreen', lazy.spawn('gnome-screenshot'), desc="Take a screenshot"),
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl -s set 200-")),
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl -s set +200")),
     #Application Keybindings
