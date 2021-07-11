@@ -19,10 +19,10 @@ for i, (name, kwargs) in enumerate(group_names, 1):
     keys.append(Key([mod, "shift"], str(i), lazy.window.togroup(name))) # Send current window to another group
 
 def init_layout_theme():
-    return {'margin':10,
-            'border_width':1,
-            'border_focus': '#bd93f9',
-            'border_normal': '#4c566a',
+    return {'margin':6,
+            'border_width':5,
+            'border_focus': '#ff79c6',
+            'border_normal': '#8be9fd',
             }
 
 layout_theme = init_layout_theme()
