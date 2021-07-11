@@ -1,6 +1,8 @@
 # dotfiles
 Configuration Files for Qtile Tiling WM
 
+Color Scheme -- Dracula
+
 Qtile Specific Files:
 
 --config.py
