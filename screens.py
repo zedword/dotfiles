@@ -1,3 +1,8 @@
+
+import os
+from subprocess import CalledProcessError, Popen
+from libqtile.log_utils import logger
+from libqtile.widget import base
 from libqtile import bar, qtile, widget
 from libqtile.config import Screen
 
@@ -6,9 +11,9 @@ widget_defaults = dict(
     fontsize=12,
     padding=3,
 )
-
+ 
 extension_defaults = widget_defaults.copy()
-
+ 
 
 screens = [
     Screen(
@@ -48,7 +53,7 @@ screens = [
 		            colour_have_updates='#ff5555',
 		            colour_no_updates='#f8f8f2',
 		            fontsize='18',
-		            distro='Arch',
+		            distro='Arch_checkupdates',
                     no_update_string='  ',
                     display_format='  ',
 		            mouse_callbacks = {"Button1":lambda:qtile.cmd_spawn("alacritty --hold -e sudo pacman -Syu")},
@@ -87,7 +92,7 @@ screens = [
                     text=' ',
                     fontsize='18',
                     background="#ff79c6"
-                ),
+                ), 
                 widget.Battery(
                     background="#ff79c6",
                     format='{percent:2.0%} {watt:.2f} W'
@@ -120,7 +125,7 @@ screens = [
                     text=' ',
                     fontsize='18',
                     background='#ff79c6'
-                ),
+                ),  
                 widget.Volume(
                     background='#ff79c6',
                 ),

@@ -23,13 +23,13 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-from keys import keys
+from keys import keys 
 from groups import groups, layouts
 from screens import screens
 from typing import List  # noqa: F401
 from libqtile import layout, qtile
 from libqtile.config import Match
-
+ 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
 follow_mouse_focus = False
@@ -48,7 +48,7 @@ floating_layout = layout.Floating(float_rules=[
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 reconfigure_screens = True
-
+ 
 # XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
 # string besides java UI toolkits; you can see several discussions on the
 # mailing lists, GitHub issues, and other WM documentation that suggest setting
@@ -58,3 +58,4 @@ reconfigure_screens = True
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
+ 
