@@ -90,37 +90,40 @@ screens = [
                     no_update_string='  ',
                     display_format='  ',
 		            mouse_callbacks = {"Button1":lambda:qtile.cmd_spawn("kitty --hold -e sudo pacman -Syu")},
-		            padding=-2,
-                    update_interval=60
+                    update_interval=60,
+                    padding=5,
 		        ),
-	        widget.TextBox(
-		  	    text='  ',
+	            widget.TextBox(
+		  	        text='  ',
 		            font='Font Awesome 5 Free',
                     fontsize='18',
 		            background='#bd93f9',
 		            foreground='#f8f8f2',
+                    padding=5,
                     mouse_callbacks={"Button1":lambda:qtile.cmd_spawn("kitty -e sudo powertop --auto-tune"), "Button3":lambda:qtile.cmd_spawn("kitty -e sudo x86_energy_perf_policy --turbo-enable 0")}
 		        ),
-		widget.TextBox(
+		        widget.TextBox(
 		            text='  ',
 		            font='Font Awesome 5 Free',
                     fontsize='18',
 		            background='#bd93f9',
-		            foreground='#f8f8f2',
+		            padding=5,
+                    foreground='#f8f8f2',
 		            mouse_callbacks={"Button1":lambda:qtile.cmd_spawn("kitty -e bluetoothctl power on")},
 		        ),
-		widget.TextBox(
+		        widget.TextBox(
 		            text='  ',
 		            font='Font Awesome 5 Free',
                     fontsize='18',
 		            background='#bd93f9',
-		            foreground='#f8f8f2',
+		            padding=5,
+                    foreground='#f8f8f2',
 		            mouse_callbacks={"Button1":lambda:qtile.cmd_spawn("kitty --hold -e vim -p /home/max/.config/qtile/config.py /home/max/.config/qtile/groups.py /home/max/.config/qtile/keys.py /home/max/.config/qtile/screens.py")},
 		        ),		
-		widget.TextBox(
+		        widget.TextBox(
                     text='',
                     font='Font Awesome 5 Free',
-		    fontsize='60',
+		            fontsize='60',
                     background='#bd93f9',
                     foreground='#ff79c6',
                     padding=-2,
@@ -138,7 +141,7 @@ screens = [
                 widget.TextBox(
                     text= '',
                     font='Font Awesome 5 Free',
-		    fontsize='60',
+		            fontsize='60',
                     background='#ff79c6',
                     foreground='#bd93f9',
                     padding=-2,
@@ -157,7 +160,7 @@ screens = [
                 widget.TextBox(
                     text= '',
                     font='Font Awesome 5 Free',
-		    fontsize='60',
+		            fontsize='60',
                     background='#bd93f9',
                     foreground='#ff79c6',
                     padding=-2,
@@ -174,7 +177,7 @@ screens = [
                 widget.TextBox(
                     text= '',
                     font='Font Awesome 5 Free',
-		    fontsize='60',
+		            fontsize='60',
                     background='#ff79c6',
                     foreground='#bd93f9',
                     padding=-2,
@@ -185,7 +188,7 @@ screens = [
                 widget.TextBox(
                     text='',
                     font='Font Awesome 5 Free',
-		    fontsize='60',
+		            fontsize='60',
                     background='#bd93f9',
                     foreground='#ff79c6',
                     padding=-2,
