@@ -7,7 +7,7 @@ from libqtile import bar, qtile, widget
 from libqtile.config import Screen
 
 widget_defaults = dict(
-    font='Font Awesome 5 Free',
+    font='Font Awesome 6 Free',
     fontsize=13,
     padding=4,
 )
@@ -40,8 +40,8 @@ screens = [
         top=bar.Bar(
             [
                 widget.GroupBox(
-                    font='Font Awesome 5 Free',
-                    fontsize=20,
+                    font='Font Awesome 6 Free',
+                    fontsize=22,
                     rounded=True,
                     highlight_method='text',
                     this_current_screen_border='#ff79c6',
@@ -58,7 +58,8 @@ screens = [
                     fontsize=14,
                     foreground='#f8f8f2',
                     max_chars=60,
-                    parse_text=win_names
+                    parse_text=win_names,
+                    padding=10,
                     ),
                 widget.Chord(
                     chords_colors={
@@ -67,12 +68,12 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.TextBox(
-		            text='',
-		            font='Font Awesome 5 Free', 
-			    fontsize='60',
+		            text='  ',
+		            font='Font Awesome 6 Free', 
+			        fontsize='45',
 		            background='#282a36',
 		            foreground='#bd93f9',
-		            padding=-2,
+		            padding=-8,
 	            ),
 		       # widget.BluetoothWidget(
                #     colour_bluetooth_on='#ff5555',
@@ -84,18 +85,18 @@ screens = [
 		            background='#bd93f9',
 		            foreground='#f8f8f2', colour_have_updates='#ff5555',
 		            colour_no_updates='#f8f8f2',
-                    font='Font Awesome 5 Free',
+                    font='Font Awesome 6 Free',
                     fontsize='18',
 		            distro='Arch_checkupdates',
                     no_update_string='  ',
                     display_format='  ',
 		            mouse_callbacks = {"Button1":lambda:qtile.cmd_spawn("kitty --hold -e sudo pacman -Syu")},
                     update_interval=60,
-                    padding=5,
+                    padding=0,
 		        ),
 	            widget.TextBox(
 		  	        text='  ',
-		            font='Font Awesome 5 Free',
+		            font='Font Awesome 6 Free',
                     fontsize='18',
 		            background='#bd93f9',
 		            foreground='#f8f8f2',
@@ -104,7 +105,7 @@ screens = [
 		        ),
 		        widget.TextBox(
 		            text='  ',
-		            font='Font Awesome 5 Free',
+		            font='Font Awesome 6 Free',
                     fontsize='18',
 		            background='#bd93f9',
 		            padding=5,
@@ -113,91 +114,94 @@ screens = [
 		        ),
 		        widget.TextBox(
 		            text='  ',
-		            font='Font Awesome 5 Free',
+		            font='Font Awesome 6 Free',
                     fontsize='18',
 		            background='#bd93f9',
-		            padding=5,
+		            padding=0,
                     foreground='#f8f8f2',
 		            mouse_callbacks={"Button1":lambda:qtile.cmd_spawn("kitty --hold -e vim -p /home/max/.config/qtile/config.py /home/max/.config/qtile/groups.py /home/max/.config/qtile/keys.py /home/max/.config/qtile/screens.py")},
 		        ),		
 		        widget.TextBox(
-                    text='',
-                    font='Font Awesome 5 Free',
-		            fontsize='60',
+                    text=' ',
+                    font='Font Awesome 6 Free',
+		            fontsize='45',
                     background='#bd93f9',
                     foreground='#ff79c6',
-                    padding=-2,
+                    padding=-8,
                 ),
                 widget.TextBox(
                     text=' ',
-                    font='Font Awesome 5 Free',
+                    font='Font Awesome 6 Free',
                     fontsize='18',
                     background="#ff79c6"
                 ), 
                 widget.Battery(
                     background="#ff79c6",
-                    format='{percent:2.0%} {watt:.2f} W'
+                    format='{percent:2.0%} {watt:.2f} W',
+                    padding=0,
                 ),
                 widget.TextBox(
-                    text= '',
-                    font='Font Awesome 5 Free',
-		            fontsize='60',
+                    text= ' ',
+                    font='Font Awesome 6 Free',
+		            fontsize='50',
                     background='#ff79c6',
                     foreground='#bd93f9',
-                    padding=-2,
+                    padding=-8,
                 ),
                 widget.TextBox(
-                    text="",
-                    font='Font Awesome 5 Free',
+                    text=" ",
+                    font='Font Awesome 6 Free',
                     fontsize='18',
                     background='#bd93f9'
                 ),
                 widget.ThermalSensor(
                     background='#bd93f9',
 		            update_interval=10,
-                    padding=5,
+                    padding=-1,
                 ),
                 widget.TextBox(
-                    text= '',
-                    font='Font Awesome 5 Free',
-		            fontsize='60',
+                    text= ' ',
+                    font='Font Awesome 6 Free',
+		            fontsize='50',
                     background='#bd93f9',
                     foreground='#ff79c6',
-                    padding=-2,
+                    padding=-8,
                 ),
                 widget.TextBox(
                     text=' ',
-                    font='Font Awesome 5 Free',
+                    font='Font Awesome 6 Free',
                     fontsize='18',
                     background='#ff79c6'
                 ),  
                 widget.Volume(
                     background='#ff79c6',
+                    padding=-1,
                 ),
                 widget.TextBox(
-                    text= '',
-                    font='Font Awesome 5 Free',
-		            fontsize='60',
+                    text= ' ',
+                    font='Font Awesome 6 Free',
+		            fontsize='50',
                     background='#ff79c6',
                     foreground='#bd93f9',
-                    padding=-2,
+                    padding=-8,
                 ),
                 widget.Clock(
                     background='#bd93f9',
-                    format='%Y-%m-%d %a %I:%M %p'),
+                    format='%Y-%m-%d %a %I:%M %p'
+                ),
                 widget.TextBox(
-                    text='',
-                    font='Font Awesome 5 Free',
-		            fontsize='60',
+                    text=' ',
+                    font='Font Awesome 6 Free',
+		            fontsize='45',
                     background='#bd93f9',
                     foreground='#ff79c6',
-                    padding=-2,
+                    padding=-8,
                 ),
                 widget.QuickExit(
                     background='#ff79c6',
                     foreground='#50fa7b',
                     default_text=' ',
-                    font='Font Awesome 5 Free',
+                    font='Font Awesome 6 Free',
                     fontsize=22,
                     countdown_format=' {} '
                 )
