@@ -4,14 +4,14 @@
 
 <em>Color Scheme -- Dracula</em> 
 
-<b>Qtile Specific Files:</b>
+<b>Qtile:</b>
 <ul>
   <li>config.py</li>
   <li>keys.py</li>
   <li>screens.py</li>
   <li>groups.py</li>
 </ul>
-<b>Xorg Specific Files:</b>
+<b>Xorg:</b>
 <ul>
   <li>.xprofile</li>
  </ul>
