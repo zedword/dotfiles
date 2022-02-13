@@ -1,26 +1,21 @@
 # dotfiles
-Configuration Files for Qtile Tiling WM
 
-Color Scheme -- Dracula
+<b>Configuration Files for Qtile WM</b>
 
-Qtile Specific Files:
+<em>Color Scheme -- Dracula</em> 
 
---config.py
-
---keys.py
-
---screens.py
-
---groups.py
-
-Xorg Specific Files:
-
---.xprofile
-
-Application Configuration:
-
---Starship-starship.toml
-
---Rofi-config.rasi
-
---Spotify-tui-config.yml
+<b>Qtile:</b>
+<ul>
+  <li>config.py</li>
+  <li>keys.py</li>
+  <li>screens.py</li>
+  <li>groups.py</li>
+</ul>
+<b>Xorg:</b>
+<ul>
+  <li>.xprofile</li>
+ </ul>
+<b>Application Configuration:</b>
+<ul>
+  <li>Rofi - config.rasi</li>
+  <li>Kitty - kitty.conf</li>
