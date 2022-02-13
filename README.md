@@ -19,3 +19,7 @@
 <ul>
   <li>Rofi - config.rasi</li>
   <li>Kitty - kitty.conf</li>
+</ul>
+<b>Wallpaper</b>
+<ul>
+  <li>Sunshine.jpg</li> 
