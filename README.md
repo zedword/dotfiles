@@ -22,4 +22,5 @@
 </ul>
 <b>Wallpaper</b>
 <ul>
-  <li>Sunshine.jpg</li> 
+  <li>Sunshine.jpg</li>
+  <li><a href="https://www.redbubble.com/people/chingyeh/works/31034726-false-god">Artist Credit -- chingyeh</a></li>
