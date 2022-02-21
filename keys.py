@@ -2,10 +2,6 @@
 from libqtile.config import Key, Drag, Click
 from libqtile.lazy import lazy
 
-mod = "mod4"
-alt = "mod1"
-terminal = "alacritty" 
- 
 
 keys = [
     #Special Keys
