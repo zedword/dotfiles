@@ -2,18 +2,22 @@
 from libqtile.config import Key, Drag, Click
 from libqtile.lazy import lazy
 
+mod = "mod4"
+alt = "mod1"
+terminal = "kitty" 
+ 
 
 keys = [
     #Special Keys
-    Key([mod, "control"], "b", lazy.spawn('alacritty --hold -e python /home/max/Documents/Python/BluetoothToggle.py'), desc="Toggle Bluetooth Power On/Off"),
+    Key([mod, "control"], "b", lazy.spawn('kitty --hold -e python /home/max/Documents/Python/BluetoothToggle.py'), desc="Toggle Bluetooth Power On/Off"),
     Key([], 'XF86Battery', lazy.spawn('light-locker-command -l'), desc="Lock screen"),	
-    Key([], '3270_PrintScreen', lazy.spawn('gnome-screenshot'), desc="Take a screenshot"),
+    Key([], 'Print', lazy.spawn('gnome-screenshot'), desc="Take a screenshot"),
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl -s set 200-")),
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl -s set +200")),
     #Application Keybindings
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
-    Key([mod], "f", lazy.spawn('alacritty --hold -e ranger'), desc='Open Ranger Terminal'),
-    Key([mod], "m", lazy.spawn('alacritty --hold -e cmus'), desc='Open Cmus Terminal'),
+    Key([mod], "f", lazy.spawn('kitty --hold -e ranger'), desc='Open Ranger Terminal'),
+    Key([mod], "m", lazy.spawn('kitty --hold -e cmus'), desc='Open Cmus Terminal'),
     Key([mod, "shift"], "Return", lazy.spawn('rofi -show run'), desc="Spawn a rofi run window"),
     Key([mod], "w", lazy.spawn('librewolf'), desc="Spawn a browser window"),
     #Volume Control

@@ -23,13 +23,24 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
+
 from keys import keys 
-from groups import groups, layouts
+from groups import groups, group_names, layouts, layout_theme
 from screens import screens
 from typing import List  # noqa: F401
-from libqtile import layout, qtile
+from libqtile import layout,  qtile
 from libqtile.config import Match
- 
+from libqtile.command import lazy
+
+import subprocess
+
+from libqtile import hook
+
+
+@hook.subscribe.startup_once
+def autostart():
+    subprocess.run(['/home/max/.config/qtile/autostart.sh'])
+
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
 follow_mouse_focus = False
@@ -44,7 +55,7 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class='ssh-askpass'),  # ssh-askpass
     Match(title='branchdialog'),  # gitk
     Match(title='pinentry'),  # GPG key password entry
-])
+    ], **layout_theme )
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 reconfigure_screens = True
