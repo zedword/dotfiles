@@ -10,6 +10,7 @@
   <li>keys.py</li>
   <li>screens.py</li>
   <li>groups.py</li>
+  <li>hooks.py</li>
 </ul>
 <b>Xorg:</b>
 <ul>
